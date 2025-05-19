@@ -1,3 +1,6 @@
+package persistencia;
+
+import persistencia.ConexionSQLite;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -24,11 +27,4 @@ public class JugadorDAO {
             System.out.println("❌ Error al insertar jugador: " + e.getMessage());
         }
     }
-    
-    /*
-    public static void main(String[] args) {
-        JugadorDAO.insertarJugador("Mario", "Guerrero");  // Puedes probar con varios
-        JugadorDAO.insertarJugador("Karol", "Mago");
-    }
-    */
 }

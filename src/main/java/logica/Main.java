@@ -1,9 +1,12 @@
-import Personajes.*;
-import gui.Main_Interface;
+package logica;
 
-public class ProyectoPOO {
+import logica.personajes.Mago;
+import logica.personajes.Enemigo;
+import gui.Bienvenida_Interface;
+
+public class Main {
     public static void main(String[] args) {
-        Main_Interface pantalla1 = new Main_Interface();
+        Bienvenida_Interface pantalla1 = new Bienvenida_Interface();
         
         pantalla1.setVisible(true);
         pantalla1.setLocationRelativeTo(null);

@@ -1,4 +1,4 @@
-package Personajes;
+package logica.personajes;
 
 public class Guerrero extends Personaje{
     private int arma;

@@ -1,5 +1,11 @@
-gui\Main_Interface$1.class
-ConexionSQLite.class
-gui\Main_Interface.class
-JugadorDAO.class
-gui\Main_Interface$2.class
+logica\personajes\Personaje.class
+logica\personajes\Atacable.class
+logica\personajes\Enemigo.class
+gui\Bienvenida_Interface.class
+persistencia\JugadorDAO.class
+gui\Bienvenida_Interface$2.class
+logica\personajes\Mago.class
+logica\personajes\Guerrero.class
+logica\Main.class
+persistencia\ConexionSQLite.class
+gui\Bienvenida_Interface$1.class

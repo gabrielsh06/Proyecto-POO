@@ -1,4 +1,4 @@
-package Personajes;
+package logica.personajes;
 
 public class Mago extends Personaje{
     private final int inteligencia;

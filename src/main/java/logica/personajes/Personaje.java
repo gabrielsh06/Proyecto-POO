@@ -1,4 +1,4 @@
-package Personajes;
+package logica.personajes;
 
 public class Personaje implements Atacable{
     private String nombre;
