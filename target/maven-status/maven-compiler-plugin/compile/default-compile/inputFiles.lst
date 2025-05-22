@@ -1,5 +1,8 @@
 C:\Users\Gabriel Sánchez\Desktop\Gabriel Sánchez\Proyecto POO\ProyectoPOO\src\main\java\gui\Bienvenida_Interface.java
+C:\Users\Gabriel Sánchez\Desktop\Gabriel Sánchez\Proyecto POO\ProyectoPOO\src\main\java\gui\StartGame_Interface.java
+C:\Users\Gabriel Sánchez\Desktop\Gabriel Sánchez\Proyecto POO\ProyectoPOO\src\main\java\logica\Jugador.java
 C:\Users\Gabriel Sánchez\Desktop\Gabriel Sánchez\Proyecto POO\ProyectoPOO\src\main\java\logica\Main.java
+C:\Users\Gabriel Sánchez\Desktop\Gabriel Sánchez\Proyecto POO\ProyectoPOO\src\main\java\logica\Partida.java
 C:\Users\Gabriel Sánchez\Desktop\Gabriel Sánchez\Proyecto POO\ProyectoPOO\src\main\java\logica\personajes\Atacable.java
 C:\Users\Gabriel Sánchez\Desktop\Gabriel Sánchez\Proyecto POO\ProyectoPOO\src\main\java\logica\personajes\Enemigo.java
 C:\Users\Gabriel Sánchez\Desktop\Gabriel Sánchez\Proyecto POO\ProyectoPOO\src\main\java\logica\personajes\Guerrero.java
@@ -7,3 +10,4 @@ C:\Users\Gabriel Sánchez\Desktop\Gabriel Sánchez\Proyecto POO\ProyectoPOO\src\
 C:\Users\Gabriel Sánchez\Desktop\Gabriel Sánchez\Proyecto POO\ProyectoPOO\src\main\java\logica\personajes\Personaje.java
 C:\Users\Gabriel Sánchez\Desktop\Gabriel Sánchez\Proyecto POO\ProyectoPOO\src\main\java\persistencia\ConexionSQLite.java
 C:\Users\Gabriel Sánchez\Desktop\Gabriel Sánchez\Proyecto POO\ProyectoPOO\src\main\java\persistencia\JugadorDAO.java
+C:\Users\Gabriel Sánchez\Desktop\Gabriel Sánchez\Proyecto POO\ProyectoPOO\src\main\java\persistencia\PartidaDAO.java

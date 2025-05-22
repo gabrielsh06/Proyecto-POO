@@ -95,6 +95,7 @@
               <Font name="Serif" size="14" style="3"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Iniciar Juego"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnIniciarActionPerformed"/>

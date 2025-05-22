@@ -1,8 +1,9 @@
 package logica;
 
-import logica.personajes.Mago;
-import logica.personajes.Enemigo;
+import java.util.List;
+
 import gui.Bienvenida_Interface;
+import persistencia.JugadorDAO;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,10 +12,11 @@ public class Main {
         pantalla1.setVisible(true);
         pantalla1.setLocationRelativeTo(null);
         
-        Mago mago = new Mago(10, 10, 10, 20);
-        Enemigo enemigo = new Enemigo("Ogro", 40, 50);
-        
-        enemigo.atacar(mago);
-        mago.atacar(enemigo);
+        JugadorDAO dao = new JugadorDAO();
+        List<Jugador> jugadores = dao.obtenerJugadores();
+
+        for (Jugador j : jugadores) {
+            System.out.println("ID: " + j.getId() + ", Nombre: " + j.getNombre() + ", Tipo: " + j.getTipo());
+        }
     }
 }

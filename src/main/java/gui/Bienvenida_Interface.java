@@ -42,6 +42,7 @@ public class Bienvenida_Interface extends javax.swing.JFrame {
 
         btnIniciar.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         btnIniciar.setText("Iniciar Juego");
+        btnIniciar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnIniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIniciarActionPerformed(evt);
@@ -119,7 +120,10 @@ public class Bienvenida_Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
-        // TODO add your handling code here:
+        StartGame_Interface iniciar = new StartGame_Interface();
+        iniciar.setVisible(true);
+        iniciar.setLocationRelativeTo(null);
+        
     }//GEN-LAST:event_btnIniciarActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed

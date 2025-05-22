@@ -6,6 +6,5 @@ persistencia\JugadorDAO.class
 gui\Bienvenida_Interface$2.class
 logica\personajes\Mago.class
 logica\personajes\Guerrero.class
-logica\Main.class
 persistencia\ConexionSQLite.class
 gui\Bienvenida_Interface$1.class
