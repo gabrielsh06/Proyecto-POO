@@ -1,0 +1,22 @@
+[33m14b0e22[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mInterfaz-Juego[m[33m)[m HEAD@{0}: commit: Empezar juego actualizado
+[33m96fca02[m[33m ([m[1;31morigin/Interfaz-EmpezarJuego[m[33m, [m[1;32mInterfaz-EmpezarJuego[m[33m)[m HEAD@{1}: checkout: moving from Interfaz-EmpezarJuego to Interfaz-Juego
+[33m96fca02[m[33m ([m[1;31morigin/Interfaz-EmpezarJuego[m[33m, [m[1;32mInterfaz-EmpezarJuego[m[33m)[m HEAD@{2}: commit: Interfaz Emepzar Juego actualizada(Imágenes)
+[33m9b13405[m[33m ([m[1;32mInterfaz-CargarPartida[m[33m)[m HEAD@{3}: checkout: moving from Interfaz-CargarPartida to Interfaz-EmpezarJuego
+[33m9b13405[m[33m ([m[1;32mInterfaz-CargarPartida[m[33m)[m HEAD@{4}: reset: moving to 9b13405
+[33m87d001b[m[33m ([m[1;31morigin/Interfaz-Principal[m[33m, [m[1;31morigin/Interfaz-CargarPartida[m[33m, [m[1;32mmain[m[33m, [m[1;32mInterfaz-Principal[m[33m)[m HEAD@{5}: reset: moving to 87d001b
+[33m87d001b[m[33m ([m[1;31morigin/Interfaz-Principal[m[33m, [m[1;31morigin/Interfaz-CargarPartida[m[33m, [m[1;32mmain[m[33m, [m[1;32mInterfaz-Principal[m[33m)[m HEAD@{6}: reset: moving to 87d001b
+[33m9b13405[m[33m ([m[1;32mInterfaz-CargarPartida[m[33m)[m HEAD@{7}: reset: moving to 9b13405
+[33m87d001b[m[33m ([m[1;31morigin/Interfaz-Principal[m[33m, [m[1;31morigin/Interfaz-CargarPartida[m[33m, [m[1;32mmain[m[33m, [m[1;32mInterfaz-Principal[m[33m)[m HEAD@{8}: checkout: moving from Interfaz-EmpezarJuego to Interfaz-CargarPartida
+[33m9b13405[m[33m ([m[1;32mInterfaz-CargarPartida[m[33m)[m HEAD@{9}: commit: Interfaz Empezar Juego añadido
+[33m87d001b[m[33m ([m[1;31morigin/Interfaz-Principal[m[33m, [m[1;31morigin/Interfaz-CargarPartida[m[33m, [m[1;32mmain[m[33m, [m[1;32mInterfaz-Principal[m[33m)[m HEAD@{10}: checkout: moving from Interfaz-Principal to Interfaz-EmpezarJuego
+[33m87d001b[m[33m ([m[1;31morigin/Interfaz-Principal[m[33m, [m[1;31morigin/Interfaz-CargarPartida[m[33m, [m[1;32mmain[m[33m, [m[1;32mInterfaz-Principal[m[33m)[m HEAD@{11}: checkout: moving from Interfaz-CargarPartida to Interfaz-Principal
+[33m87d001b[m[33m ([m[1;31morigin/Interfaz-Principal[m[33m, [m[1;31morigin/Interfaz-CargarPartida[m[33m, [m[1;32mmain[m[33m, [m[1;32mInterfaz-Principal[m[33m)[m HEAD@{12}: checkout: moving from Interfaz-Principal to Interfaz-CargarPartida
+[33m87d001b[m[33m ([m[1;31morigin/Interfaz-Principal[m[33m, [m[1;31morigin/Interfaz-CargarPartida[m[33m, [m[1;32mmain[m[33m, [m[1;32mInterfaz-Principal[m[33m)[m HEAD@{13}: checkout: moving from main to Interfaz-Principal
+[33m87d001b[m[33m ([m[1;31morigin/Interfaz-Principal[m[33m, [m[1;31morigin/Interfaz-CargarPartida[m[33m, [m[1;32mmain[m[33m, [m[1;32mInterfaz-Principal[m[33m)[m HEAD@{14}: reset: moving to HEAD
+[33m87d001b[m[33m ([m[1;31morigin/Interfaz-Principal[m[33m, [m[1;31morigin/Interfaz-CargarPartida[m[33m, [m[1;32mmain[m[33m, [m[1;32mInterfaz-Principal[m[33m)[m HEAD@{15}: checkout: moving from main to main
+[33m87d001b[m[33m ([m[1;31morigin/Interfaz-Principal[m[33m, [m[1;31morigin/Interfaz-CargarPartida[m[33m, [m[1;32mmain[m[33m, [m[1;32mInterfaz-Principal[m[33m)[m HEAD@{16}: reset: moving to HEAD
+[33m87d001b[m[33m ([m[1;31morigin/Interfaz-Principal[m[33m, [m[1;31morigin/Interfaz-CargarPartida[m[33m, [m[1;32mmain[m[33m, [m[1;32mInterfaz-Principal[m[33m)[m HEAD@{17}: checkout: moving from Interfaz-Principal to main
+[33m87d001b[m[33m ([m[1;31morigin/Interfaz-Principal[m[33m, [m[1;31morigin/Interfaz-CargarPartida[m[33m, [m[1;32mmain[m[33m, [m[1;32mInterfaz-Principal[m[33m)[m HEAD@{18}: checkout: moving from main to Interfaz-Principal
+[33m87d001b[m[33m ([m[1;31morigin/Interfaz-Principal[m[33m, [m[1;31morigin/Interfaz-CargarPartida[m[33m, [m[1;32mmain[m[33m, [m[1;32mInterfaz-Principal[m[33m)[m HEAD@{19}: reset: moving to HEAD
+[33m87d001b[m[33m ([m[1;31morigin/Interfaz-Principal[m[33m, [m[1;31morigin/Interfaz-CargarPartida[m[33m, [m[1;32mmain[m[33m, [m[1;32mInterfaz-Principal[m[33m)[m HEAD@{20}: reset: moving to 87d001b
+[33m87d001b[m[33m ([m[1;31morigin/Interfaz-Principal[m[33m, [m[1;31morigin/Interfaz-CargarPartida[m[33m, [m[1;32mmain[m[33m, [m[1;32mInterfaz-Principal[m[33m)[m HEAD@{21}: commit (initial): Interfaz Principal añadido
