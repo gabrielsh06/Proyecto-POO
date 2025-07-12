@@ -70,4 +70,63 @@ public class JugadorDAO {
         }
         return lista;
     }
+
+    // **** Eliminar Jugador ****
+    public void eliminarJugadorPorId(int idJugador) {
+        String sql = "DELETE FROM jugadores WHERE id = ?";
+
+        try (Connection conn = ConexionSQLite.conectar();
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setInt(1, idJugador);
+            int filas = pstmt.executeUpdate();
+
+            if (filas > 0) {
+                System.out.println("Jugador con ID " + idJugador + " eliminado correctamente.");
+            } else {
+                System.out.println("No se encontró el jugador con ID " + idJugador + ".");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // **** Contar Jugador por ID ****
+    public int contarPartidasPorJugador(int idJugador) {
+        String sql = "SELECT COUNT(*) FROM partidas WHERE id_jugador = ?";
+        int total = 0;
+
+        try (Connection conn = ConexionSQLite.conectar();
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setInt(1, idJugador);
+            ResultSet rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                total = rs.getInt(1);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return total;
+    }
+
+    // **** Eliminar Partida por Jugador ****
+    public void eliminarPartidasPorJugador(int idJugador) {
+        String sql = "DELETE FROM partidas WHERE id_jugador = ?";
+
+        try (Connection conn = ConexionSQLite.conectar();
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setInt(1, idJugador);
+            pstmt.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

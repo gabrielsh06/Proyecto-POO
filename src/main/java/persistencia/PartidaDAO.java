@@ -65,4 +65,83 @@ public class PartidaDAO {
         }
         return lista;
     }
+
+    // **** Eliminar Partida por Jugador ****
+    public void eliminarPartidasPorJugador(int idJugador) {
+        String sql = "DELETE FROM partidas WHERE jugador_id = ?";
+
+        try (Connection conn = ConexionSQLite.conectar();
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setInt(1, idJugador);
+            int filas = pstmt.executeUpdate();
+
+            System.out.println("Se eliminaron " + filas + " partidas del jugador con ID: " + idJugador);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // **** Eliminar Partida por ID ****
+    public void eliminarPartidaPorId(int idPartida) {
+        String sql = "DELETE FROM partidas WHERE id = ?";
+
+        try (Connection conn = ConexionSQLite.conectar();
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setInt(1, idPartida);
+            int filas = pstmt.executeUpdate();
+
+            if (filas > 0) {
+                System.out.println("Partida con ID " + idPartida + " eliminada.");
+            } else {
+                System.out.println("No se encontró la partida con ID: " + idPartida);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // **** Obtener Partidas por Jugador ****
+    public int contarPartidasPorJugador(int idJugador) {
+        String sql = "SELECT COUNT(*) FROM partidas WHERE jugador_id = ?";
+        int total = 0;
+
+        try (Connection conn = ConexionSQLite.conectar();
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setInt(1, idJugador);
+            ResultSet rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                total = rs.getInt(1);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return total;
+    }
+
+    // **** Eliminar Partidas por Jugador ****
+    public void eliminarPartida(int idPartida) {
+        String sql = "DELETE FROM partidas WHERE id = ?";
+
+        try (Connection conn = ConexionSQLite.conectar();
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setInt(1, idPartida);
+            pstmt.executeUpdate();
+
+            System.out.println("Partida con ID " + idPartida + " eliminada.");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }

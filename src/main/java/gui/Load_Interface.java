@@ -48,6 +48,7 @@ public class Load_Interface extends javax.swing.JFrame {
         panelContenedor = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         liList = new javax.swing.JList<>();
+        btnDelete = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -92,6 +93,14 @@ public class Load_Interface extends javax.swing.JFrame {
 
         scrollPartidas.setViewportView(panelContenedor);
 
+        btnDelete.setBackground(new java.awt.Color(30, 30, 30));
+        btnDelete.setText("DELETE");
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -101,7 +110,9 @@ public class Load_Interface extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(84, 84, 84)
                         .addComponent(btnLoad, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(132, 132, 132)
+                        .addGap(13, 13, 13)
+                        .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(80, 80, 80)
@@ -118,10 +129,11 @@ public class Load_Interface extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(scrollPartidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnLoad, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(43, 43, 43))
         );
 
@@ -170,12 +182,70 @@ public class Load_Interface extends javax.swing.JFrame {
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         this.dispose();
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        int index = liList.getSelectedIndex();
+
+    if (index != -1) {
+        Jugador jugadorSeleccionado = jugadores.get(index);
+        int idJugador = jugadorSeleccionado.getId();
+
+        PartidaDAO partidaDAO = new PartidaDAO();
+        JugadorDAO jugadorDAO = new JugadorDAO();
+
+        List<Partida> partidas = partidaDAO.obtenerPartidasPorJugador(idJugador);
+
+        if (!partidas.isEmpty()) {
+            Partida ultimaPartida = partidas.get(partidas.size() - 1); // Última
+
+            int confirm = javax.swing.JOptionPane.showConfirmDialog(this,
+                "¿Seguro que deseas eliminar la última partida de este jugador?\n" +
+                "Si no tiene más partidas, también se eliminará el jugador.",
+                "Confirmar eliminación", javax.swing.JOptionPane.YES_NO_OPTION);
+
+            if (confirm == javax.swing.JOptionPane.YES_OPTION) {
+                partidaDAO.eliminarPartida(ultimaPartida.getId());
+
+                // Verificar si aún tiene más partidas
+                int cantidad = partidaDAO.contarPartidasPorJugador(idJugador);
+                if (cantidad == 0) {
+                    jugadorDAO.eliminarJugadorPorId(idJugador);
+                }
+
+                // Refrescar la lista
+                javax.swing.JOptionPane.showMessageDialog(this, "Partida (y jugador si era el único) eliminados.");
+                recargarListaJugadores();
+            }
+
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, "Este jugador no tiene partidas que eliminar.");
+        }
+
+    } else {
+        javax.swing.JOptionPane.showMessageDialog(this, "Selecciona un jugador para eliminar su partida.");
+    }
+    }//GEN-LAST:event_btnDeleteActionPerformed
     
-    
+    private void recargarListaJugadores() {
+    JugadorDAO jugadorDAO = new JugadorDAO();
+    jugadores = jugadorDAO.obtenerJugadores();
+
+    DefaultListModel<String> modeloLista = new DefaultListModel<>();
+    for (Jugador jugador : jugadores) {
+        if (jugador.getPersonaje() != null) {
+            modeloLista.addElement(jugador.getNombre() + " (" + jugador.getPersonaje().getTipo() + ")");
+        } else {
+            modeloLista.addElement(jugador.getNombre() + " (SIN PERSONAJE)");
+        }
+    }
+    liList.setModel(modeloLista);
+}
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnLoad;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
